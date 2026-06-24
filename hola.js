@@ -1,6 +1,6 @@
 const canvasMat = document.getElementById('matrix-canvas');
 const ctxMat = canvasMat.getContext('2d');
-let fontSize = 15, columnSpacing = 95, textMatrix = '💜Valeria🪷', columnsMat, dropsMat;
+let fontSize = 15, columnSpacing = 95, textMatrix = '💕Lilian💕', columnsMat, dropsMat;
 const starsAnim = [], emojis = [];
 const numStarsAnim = 300, speedStars = 2.5;
 
@@ -55,7 +55,7 @@ window.draw2DEffects = function() {
         let y = dropsMat[i];
         for (let j = 0; j < 10; j++) {
             let opacity = 1 - j * 0.1;
-            ctxMat.fillStyle = `rgba(220, 180, 255, ${opacity})`;
+            ctxMat.fillStyle = `rgba(255, 192, 203, ${opacity})`;
             ctxMat.fillText(textMatrix, x, y - j * fontSize);
         }
         dropsMat[i] += fontSize * 0.2;
@@ -70,7 +70,7 @@ window.draw2DEffects = function() {
         else {
             ctxMat.globalAlpha = e.life;
             ctxMat.font = `${e.size}px serif`;
-            ctxMat.fillText("💜", e.x, e.y);
+            ctxMat.fillText("🩷", e.x, e.y);
         }
     }
     ctxMat.globalAlpha = 1.0;
